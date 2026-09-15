@@ -298,8 +298,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1042,8 +1042,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1226,6 +1226,62 @@ Transform:
   - {fileID: 578671234}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1738728400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1738728402}
+  - component: {fileID: 1738728401}
+  m_Layer: 0
+  m_Name: TurnBasedCombat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1738728401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738728400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8370a8361560ab548bce52c7818a4fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TurnBasedCombat
+  playerCurrentHealth: 0
+  playerMaxHealth: 10
+  enemyCurrentHealth: 0
+  enemyMaxHealth: 10
+  playerHealthString: {fileID: 1350182394}
+  enemyHealthString: {fileID: 106231827}
+  player: {fileID: 642021555}
+  playerStartLocation: {fileID: 0}
+  enemy: {fileID: 1380221330}
+  enemyStartLocation: {fileID: 0}
+  playerAttack: 0
+  enemyAttack: 0
+--- !u!4 &1738728402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738728400}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909443478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,3 +1395,4 @@ SceneRoots:
   - {fileID: 642021559}
   - {fileID: 1380221334}
   - {fileID: 321053681}
+  - {fileID: 1738728402}

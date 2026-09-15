@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float _movementSpeed = 5;
     [SerializeField] float _jumpForce = 5;
     [SerializeField] Vector2 _moveInput;
-
+    [SerializeField] Animator _playerAnimator;
+    private int isWalking = Animator.StringToHash("isWalking");
     private Rigidbody _playerRigidBody;
 
     private void Awake()
@@ -15,9 +16,26 @@ public class PlayerMovement : MonoBehaviour
         _playerRigidBody = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        HandlePlayerAnimation();
+    }
+
     private void FixedUpdate()
     {
         HandlePlayerMovement();
+    }
+
+    private void HandlePlayerAnimation()
+    {
+        if (_moveInput != Vector2.zero)
+        {
+            _playerAnimator.SetBool(isWalking, true);
+        }
+        else
+        {
+            _playerAnimator.SetBool(isWalking, false);
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
